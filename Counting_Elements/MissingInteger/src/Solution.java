@@ -13,17 +13,8 @@ public class Solution{
 
         //Sort the array using the priority queue
         for(int i = 0; i < a.length; i++) {
-            pq.add(a[i]);
-        }
-
-        //Remove all non-positive elements
-        while(!pq.isEmpty()) {
-            int top = pq.peek();
-            if(top <= 0) {
-                pq.poll();
-            }
-            else {
-                break;
+            if(a[i] > 0) {
+                pq.add(a[i]);
             }
         }
 
